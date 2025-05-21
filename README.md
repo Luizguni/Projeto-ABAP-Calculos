@@ -30,3 +30,13 @@ Este programa desenvolvido em **ABAP** calcula a **média anual** de um aluno co
 
 ## 🖨️ Exemplo de saída esperada:
 
+A MÉDIA ANUAL DO ALUNO É:
+7.25
+
+ALUNO: APROVADO
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+SAP NetWeaver / SAP ERP
