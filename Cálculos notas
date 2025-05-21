@@ -1,0 +1,37 @@
+ REPORT zcurso_006. " Nome do programa
+
+" Início de um bloco na tela de seleção (Selection-Screen)
+SELECTION-SCREEN BEGIN OF BLOCK bl.
+
+" Parâmetros para entrada das notas dos quatro bimestres
+PARAMETER: p_1bim(12) TYPE p DECIMALS 2. " Nota do 1º bimestre
+PARAMETER: p_2bim(12) TYPE p DECIMALS 2. " Nota do 2º bimestre
+PARAMETER: p_3bim(12) TYPE p DECIMALS 2. " Nota do 3º bimestre
+PARAMETER: p_4bim(12) TYPE p DECIMALS 2. " Nota do 4º bimestre
+
+SELECTION-SCREEN END OF BLOCK bl. " Fim do bloco de entrada
+
+" Início do processamento principal do programa
+
+START-OF-SELECTION.
+
+  " Declaração da variável para armazenar a média
+  DATA l_media(12) TYPE p DECIMALS 2.
+
+  " Cálculo da média anual com base nas 4 notas
+  l_media = ( p_1bim + p_2bim + p_3bim + p_4bim ) / 4.
+
+  " Ativa linhas em branco no output para melhor visualização
+  SET BLANK LINES ON.
+
+  " Exibição da média calculada
+  WRITE 'A MÉDIA ANUAL DO ALUNO É:'.
+  WRITE l_media.
+  SKIP.
+
+  "Verificar se o aluno foi aprovado com base na média
+  IF l_media >= 6.
+    WRITE: 'ALUNO: APROVADO'.
+  ELSE.
+    WRITE: 'ALUNO: REPROVADO'.
+  ENDIF.
