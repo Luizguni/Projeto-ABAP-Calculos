@@ -1,4 +1,4 @@
-<h1 align="center">📄 Programa ABAP: zcurso_o06</h1>
+<h1 align="center">📄 Programa ABAP: zcurso_006</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/ABAP-SAP-blue?style=for-the-badge&logo=sap&logoColor=white"/>
